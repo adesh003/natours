@@ -1,0 +1,21 @@
+# === Node.js essentials ===
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.env
+dist/
+build/
+
+# === OS / IDE crap ===
+.DS_Store
+Thumbs.db
+
+# === Git cleanup ===
+*.dll
+*.exe
+
+# === Logs & temp ===
+*.log
+temp/
+*.tmp
