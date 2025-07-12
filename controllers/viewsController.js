@@ -20,14 +20,20 @@ exports.getOverview= catchAsync(async(req,res,next)=>{
 exports.getTour=catchAsync(async(req,res)=>{
    // 1) get the data , for the requested tour( include review , tour guide , )
 
-const tour = await Tour.findOne({ slug: req.params.slug }).populate({      
-   path: 'reviews',
-   fields: 'review rating user'
-   })
+const tour = await Tour.findOne({ slug: req.params.slug })
+  .populate({
+    path: 'guides',
+    select: 'name photo role'
+  })
+  .populate({
+    path: 'reviews',
+    select: 'review rating user'
+  })
+  .exec();
 
 
    res.status(200).render('tour',{
-    title:'the Forest Hiker',
+    title:`${tour.name} Tour`,
     tour
    })})
 
