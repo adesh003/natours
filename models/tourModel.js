@@ -58,7 +58,7 @@ const tourSchemas = new mongoose.Schema(
       type: String,
       required: [true, 'A tour must have a cover image'],
     },
-    image: [String],
+    images: [String],
     createdAt: {
       type: Date,
       default: Date.now,
@@ -118,7 +118,7 @@ tourSchemas.virtual('durationWeeks').get(function () {
 });
 
 // Virtual populate
-tourSchemas.virtual('review', {
+tourSchemas.virtual('reviews', {
   ref: 'Review',
   foreignField: 'tour',
   localField: '_id',
