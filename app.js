@@ -12,7 +12,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const tourRouter = require('./Routes/tourRoutes');
 const userRouter = require('./Routes/userRoutes');
-
+const cookieParser= require('cookie-parser')
 const reviewRouter= require('./Routes/reviewRoutes')
 const viewRouter= require('./Routes/viewRoutes')
 const app = express();
@@ -55,6 +55,7 @@ app.use('/api' , limiter);
 
 // BODY PARSER , READING DATA FROM BODY INTO REQ.BODY
 app.use(express.json({limit:'10kb'}));
+app.use(cookieParser())
 
 // data sanitization againts NOSQL query injection
 
@@ -73,7 +74,7 @@ app.use(hpp({
 // test milddleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
-  console.log(req.headers)
+  console.log(req.cookies)
   next();
 });
 
