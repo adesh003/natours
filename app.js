@@ -25,7 +25,16 @@ app.use(express.static(path.join(__dirname,'public')));
 // SET Security HTTP HEADER
 
 
-app.use(helmet());
+// app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "https://cdnjs.cloudflare.com"],
+      // ... add other rules if needed
+    }
+  })
+);
 
 // DEVELOPMENT LOGIN
 if (process.env.NODE_ENV === 'development') {

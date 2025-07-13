@@ -80,5 +80,10 @@ if (process.argv.includes('--import')) {
 } else if (process.argv.includes('--delete')) {
   deleteData();
 }
+else if (process.argv.includes('--refresh')) {
+  await deleteData();
+  await importData();
+}
+
 
 console.log('Command-line arguments:', process.argv);
