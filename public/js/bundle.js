@@ -6876,14 +6876,35 @@ exports.isCancel = isCancel;
 exports.CanceledError = CanceledError;
 exports.AxiosError = AxiosError;
 exports.Axios = Axios;
-},{"./lib/axios.js":"../../node_modules/axios/lib/axios.js"}],"login.js":[function(require,module,exports) {
+},{"./lib/axios.js":"../../node_modules/axios/lib/axios.js"}],"alerts.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.login = void 0;
+exports.showAlert = exports.hideAlert = void 0;
+// type is 'success' or 'err'
+
+const hideAlert = () => {
+  const el = document.querySelector('.alert');
+  if (el) el.parentElement.removeChild(el);
+};
+exports.hideAlert = hideAlert;
+const showAlert = (type, msg) => {
+  const markup = `<div class="alert alert--${type}"> ${msg}</div>`;
+  document.querySelector('body').insertAdjacentHTML('afterbegin', markup);
+  window.setTimeout(hideAlert, 5000);
+};
+exports.showAlert = showAlert;
+},{}],"login.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.logout = exports.login = void 0;
 var _axios = _interopRequireDefault(require("axios"));
+var _alerts = require("./alerts");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 const login = async (email, password) => {
   try {
@@ -6896,28 +6917,72 @@ const login = async (email, password) => {
       }
     });
     if (res.data.status === 'success') {
-      alert('loged in successfully!');
+      (0, _alerts.showAlert)('Success', 'Loged in successfully!');
       window.setTimeout(() => {
         location.assign('/');
       }, 1500);
     }
   } catch (err) {
-    alert(err.response.data.message);
+    (0, _alerts.showAlert)('error', err.response.data.message);
   }
 };
 exports.login = login;
-},{"axios":"../../node_modules/axios/index.js"}],"index.js":[function(require,module,exports) {
+const logout = async () => {
+  try {
+    const res = await (0, _axios.default)({
+      method: 'GET',
+      url: 'http://127.0.0.1:5000/api/v1/users/logout',
+      withCredentials: true
+    });
+    if (res.data.status === 'success') location.reload(true);
+  } catch (err) {
+    (0, _alerts.showAlert)('Error', 'Error logging out! Try again');
+  }
+};
+exports.logout = logout;
+},{"axios":"../../node_modules/axios/index.js","./alerts":"alerts.js"}],"logout.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.logout = void 0;
+var _axios = _interopRequireDefault(require("axios"));
+var _alerts = require("./alerts");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+// logout.js
+
+// optional
+
+const logout = async () => {
+  try {
+    const res = await (0, _axios.default)({
+      method: 'GET',
+      url: 'http://127.0.0.1:5000/api/v1/users/logout',
+      withCredentials: true
+    });
+    if (res.data.status === 'success') {
+      window.location.href = '/'; // ✅ redirect to homepage or login
+    }
+  } catch (err) {
+    (0, _alerts.showAlert)('error', 'Logout failed. Try again!');
+  }
+};
+exports.logout = logout;
+},{"axios":"../../node_modules/axios/index.js","./alerts":"alerts.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("core-js/modules/web.timers");
 require("core-js/modules/web.immediate");
 require("core-js/modules/web.dom.iterable");
 var _login = require("./login");
+var _logout = require("./logout");
 const mapBox = document.getElementById('map');
 const loginForm = document.querySelector('.form');
+const logOutBtn = document.querySelector('.nav__el--logout');
 if (mapBox) {
   const location = JSON.parse(mapBox.dataset.locations);
-  displayMap(locations);
+  displayMap(location);
 }
 if (loginForm) loginForm.addEventListener('submit', e => {
   e.preventDefault();
@@ -6925,7 +6990,8 @@ if (loginForm) loginForm.addEventListener('submit', e => {
   const password = document.getElementById('password').value;
   (0, _login.login)(email, password);
 });
-},{"core-js/modules/web.timers":"../../node_modules/core-js/modules/web.timers.js","core-js/modules/web.immediate":"../../node_modules/core-js/modules/web.immediate.js","core-js/modules/web.dom.iterable":"../../node_modules/core-js/modules/web.dom.iterable.js","./login":"login.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+if (logOutBtn) logOutBtn.addEventListener('click', _logout.logout);
+},{"core-js/modules/web.timers":"../../node_modules/core-js/modules/web.timers.js","core-js/modules/web.immediate":"../../node_modules/core-js/modules/web.immediate.js","core-js/modules/web.dom.iterable":"../../node_modules/core-js/modules/web.dom.iterable.js","./login":"login.js","./logout":"logout.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -6950,7 +7016,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "12675" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10294" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

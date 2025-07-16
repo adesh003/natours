@@ -74,6 +74,17 @@ exports.login = catchAsync(async (req, res, next) => {
 
 });
 
+
+exports.logout = (req, res) => {
+  res.cookie('jwt', 'loggedout', {
+    expires: new Date(Date.now() + 10 * 1000),
+    httpOnly: true,
+    
+  });
+  res.status(200).json({ status: 'success' });
+};
+
+
 exports.protect = catchAsync(async (req, res, next) => {
   // 1) Getting the token
 
@@ -128,8 +139,8 @@ exports.protect = catchAsync(async (req, res, next) => {
 
 // only for rendered pages
 
-exports.isLogedIn = catchAsync(async (req, res, next) => {
- 
+exports.isLogedIn = async (req, res, next) => {
+ try{
    if(req.cookies.jwt){
   const decoded = await promisify(
     jwt.verify)(req.cookies.jwt,
@@ -150,8 +161,12 @@ exports.isLogedIn = catchAsync(async (req, res, next) => {
   res.locals.user = currentUser;
   return next();
 }
+}
+catch (err){
+  return next()
+}
 next();
-});
+};
 
 
 

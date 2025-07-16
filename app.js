@@ -52,6 +52,7 @@ const limiter= rateLimit({
 
 
 
+
 app.use('/api' , limiter);
 
 // BODY PARSER , READING DATA FROM BODY INTO REQ.BODY
