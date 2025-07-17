@@ -6969,6 +6969,36 @@ const logout = async () => {
   }
 };
 exports.logout = logout;
+},{"axios":"../../node_modules/axios/index.js","./alerts":"alerts.js"}],"updateSettings.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.updateData = void 0;
+var _axios = _interopRequireDefault(require("axios"));
+var _alerts = require("./alerts");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+// update data function
+
+const updateData = async (name, email) => {
+  try {
+    const res = await (0, _axios.default)({
+      method: 'PATCH',
+      url: 'http://127.0.0.1:5000/api/v1/users/updateMe',
+      data: {
+        name,
+        email
+      }
+    });
+    if (res.data.status === 'success') {
+      (0, _alerts.showAlert)('success', 'Data updated successfully');
+    }
+  } catch (err) {
+    (0, _alerts.showAlert)('error', err.response.data.message);
+  }
+};
+exports.updateData = updateData;
 },{"axios":"../../node_modules/axios/index.js","./alerts":"alerts.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -6977,8 +7007,10 @@ require("core-js/modules/web.immediate");
 require("core-js/modules/web.dom.iterable");
 var _login = require("./login");
 var _logout = require("./logout");
+var _updateSettings = require("./updateSettings");
 const mapBox = document.getElementById('map');
-const loginForm = document.querySelector('.form');
+const loginForm = document.querySelector('.form--login');
+const userdataForm = document.querySelector('.form-user-data');
 const logOutBtn = document.querySelector('.nav__el--logout');
 if (mapBox) {
   const location = JSON.parse(mapBox.dataset.locations);
@@ -6991,7 +7023,13 @@ if (loginForm) loginForm.addEventListener('submit', e => {
   (0, _login.login)(email, password);
 });
 if (logOutBtn) logOutBtn.addEventListener('click', _logout.logout);
-},{"core-js/modules/web.timers":"../../node_modules/core-js/modules/web.timers.js","core-js/modules/web.immediate":"../../node_modules/core-js/modules/web.immediate.js","core-js/modules/web.dom.iterable":"../../node_modules/core-js/modules/web.dom.iterable.js","./login":"login.js","./logout":"logout.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+if (userdataForm) userdataForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const name = document.getElementById('name').value;
+  (0, _updateSettings.updateData)(name, email);
+});
+},{"core-js/modules/web.timers":"../../node_modules/core-js/modules/web.timers.js","core-js/modules/web.immediate":"../../node_modules/core-js/modules/web.immediate.js","core-js/modules/web.dom.iterable":"../../node_modules/core-js/modules/web.dom.iterable.js","./login":"login.js","./logout":"logout.js","./updateSettings":"updateSettings.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -7016,7 +7054,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10294" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "3742" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
