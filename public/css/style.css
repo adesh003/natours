@@ -1323,3 +1323,12 @@ body {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
+
+.form__photo-upload input[type='file'] {
+  display: none;
+}
+.form__photo-upload .btn-text {
+  cursor: pointer; /* Show a hand cursor on hover */
+  color: #55c57a; /* Example color from the theme */
+  text-decoration: underline;
+}
