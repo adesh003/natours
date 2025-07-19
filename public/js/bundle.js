@@ -6982,7 +6982,7 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e
 // type is either 'password' or 'data'
 const updateSettings = async (data, type) => {
   try {
-    const url = type === 'password' ? 'http://127.0.0.1:3000/api/v1/users/updateMyPassword' : 'http://127.0.0.1:3000/api/v1/users/updateMe';
+    const url = type === 'password' ? 'http://127.0.0.1:5000/api/v1/users/updateMyPassword' : 'http://127.0.0.1:5000/api/v1/users/updateMe';
     const res = await (0, _axios.default)({
       method: 'PATCH',
       url,
@@ -7039,11 +7039,11 @@ if (userPasswordForm) userPasswordForm.addEventListener('submit', async e => {
   document.querySelector('.btn--save-password').textContent = 'Updating...';
   const passwordCurrent = document.getElementById('password-current').value;
   const password = document.getElementById('password').value;
-  const passwordConfirm = document.getElementById('password-confirm').value;
+  const confirmpassword = document.getElementById('password-confirm').value;
   await (0, _updateSettings.updateSettings)({
     passwordCurrent,
     password,
-    passwordConfirm
+    confirmpassword
   }, 'password');
   document.querySelector('.btn--save-password').textContent = 'Save password';
   document.getElementById('password-current').value = '';
