@@ -284,8 +284,7 @@ exports.updatePassword=catchAsync(async(req, res, next)=>{
   user.confirmpassword = req.body.confirmpassword;
   await user.save();
    
-  console.log('🧪 TOKEN:', token);
-  console.log('🛡️ JWT_SECRET:', process.env.JWT_SECRET);
+
   
   createSendToken(user, 200, res);
 
