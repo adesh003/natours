@@ -41,7 +41,10 @@ block content
             .form__group.form__photo-upload
               img.form__user-photo(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
               input#photo.form__input(type='file', accept='image/*', name='photo')
+              
+              
               label.btn-text(for='photo') Choose new photo
+                          
             .form__group.right
               button.btn.btn--small.btn--green Save settings
 
