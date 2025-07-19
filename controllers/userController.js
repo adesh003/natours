@@ -4,21 +4,23 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const factory = require('./../controllers/handlerFactory');
 const multer = require('multer')
+const sharp = require('sharp')
 
-
-const multerStorage = multer.diskStorage({
-  destination:(req,file,cb)=>{
-    cb(null, 'public/img/users');
+// const multerStorage = multer.diskStorage({
+//   destination:(req,file,cb)=>{
+//     cb(null, 'public/img/users');
    
-  },
-   filename:(req,file,cb)=>{
-      // user-id-timeStamp.jpeg
-    const ext = file.mimetype.split('/')[1];
-    cb(null,`user-${req.user.id}-${Date.now()}.${ext}`)
+//   },
+//    filename:(req,file,cb)=>{
+//       // user-id-timeStamp.jpeg
+//     const ext = file.mimetype.split('/')[1];
+//     cb(null,`user-${req.user.id}-${Date.now()}.${ext}`)
 
 
-    }
-})
+//     }
+// })
+
+const multerStorage = multer.memoryStorage()
 
 const multerFilter = (req,file ,cb)=>{
   if(file.mimetype.startsWith('image')){
@@ -37,7 +39,19 @@ const upload = multer({
 
 exports.uploadUserPhoto =upload.single('photo');
 
+exports.resizeUserPhoto =(req, res, next)=>{
+    if(!req.file) return next();
 
+  req.file.filename= `user-${req.user.id}-${Date.now()}.jpeg`
+
+    sharp(req.file.buffer)
+    .resize(500 , 500 )
+    .toFormat('jpeg')
+    .jpeg({quality:90})
+    .toFile(`public/img/users/${req.file.filename}`)
+
+    next();
+}
 
 
 
@@ -76,7 +90,7 @@ exports.updateMe =catchAsync(async(req, res, next)=>{
 
   const filteredBody = filterObj(req.body, 'name', 'email');
 
-  
+
     if(req.file) filteredBody.photo = req.file.filename;
   //3) update user document
   const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
