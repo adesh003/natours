@@ -5,6 +5,13 @@ const reviewController = require('../controllers/reviewController');
 const router = require('./reviewRoutes');
 
 
+
+
+
+
+
+
+
 const userRouter = express.Router();
 
 
@@ -30,7 +37,7 @@ userRouter
   userController.getMe,
   userController.getUser
 )
-userRouter.patch('/updateMe' , userController.updateMe)
+userRouter.patch('/updateMe' ,userController.uploadUserPhoto, userController.updateMe)
 userRouter.delete('/deleteMe', userController.deleteMe);
 
 userRouter.use(authController.restrictTo('admin'));
