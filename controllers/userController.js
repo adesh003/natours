@@ -3,6 +3,42 @@ const APIFeatures = require('./../utils/apiFeatures');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const factory = require('./../controllers/handlerFactory');
+const multer = require('multer')
+
+
+const multerStorage = multer.diskStorage({
+  destination:(req,file,cb)=>{
+    cb(null, 'public/img/users');
+   
+  },
+   filename:(req,file,cb)=>{
+      // user-id-timeStamp.jpeg
+    const ext = file.mimetype.split('/')[1];
+    cb(null,`user-${req.user.id}-${Date.now()}.${ext}`)
+
+
+    }
+})
+
+const multerFilter = (req,file ,cb)=>{
+  if(file.mimetype.startsWith('image')){
+    cb(null, true)
+  }
+  else{
+    cb(new AppError('Not an image! please upload only image', 404), false)
+  }
+}
+
+const upload = multer({ 
+          
+  storage:multerStorage,
+  fileFilter:multerFilter
+});
+
+exports.uploadUserPhoto =upload.single('photo');
+
+
+
 
 
 const filterObj = (obj,...allowedFiled) =>{
@@ -40,6 +76,8 @@ exports.updateMe =catchAsync(async(req, res, next)=>{
 
   const filteredBody = filterObj(req.body, 'name', 'email');
 
+  
+    if(req.file) filteredBody.photo = req.file.filename;
   //3) update user document
   const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
@@ -76,3 +114,4 @@ exports.getUser = factory.getOne(User);
 // Do not Update password with this route
 exports.updateUser = factory.updateOne(User);
 exports.deleteUser = factory.deleteOne(User);
+
