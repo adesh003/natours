@@ -18,7 +18,13 @@ module.exports = class Email {
     if(process.env.NODE_ENV === 'production'){
       // Sendgrid
 
-      return 1
+      return nodemailer.createTransport({
+        service: 'SendGrid',
+        auth:{
+          user:process.env.SANDGRID_USERNAME,
+          pass:process.env.SANDGRID_PASSWORD
+        }
+      })
     }
     return  nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
@@ -33,12 +39,35 @@ module.exports = class Email {
   }
   async send(template , subject){
 
+
+
+
+
+
+
+
+
+let html;
+try {
+  html = pug.renderFile(`${__dirname}/../views/email/${template}.pug`, {
+    firstName: this.firstName,
+    url: this.url,
+    subject
+  });
+} catch (err) {
+  console.error('💥 Email Template Rendering Failed:', err);
+  throw err;
+}
+
+
+
+
     //1 Render HTML on the pug template
-    const html= pug.renderFile(`${__dirname}/../views/email/${template}.pug`,{
-        firstName: this.firstName,
-        url: this.url,
-        subject
-    })
+    // const html= pug.renderFile(`${__dirname}/../views/email/${template}.pug`,{
+    //     firstName: this.firstName,
+    //     url: this.url,
+    //     subject
+    // })
 
 
     //2) define the email option
@@ -60,22 +89,12 @@ module.exports = class Email {
  async sendWelcome(){
     await this.send('welcome' , 'Welcome to the natours Family!');
   }
+
+  async sendPasswordReset(){
+    await this.send(
+      'passwordReset' ,
+      'Your password reset token (vlaid for only 10 minutes)'
+    );
+  }
 }
-// const sendEmail = async (options) =>{
-//   //1 create transpoter
-  
- 
-//     // activate in gmail "less secure app" option
-  
-  
-//   //2 Define email option 
-//   const mailOption = {
-//     from: 'adesh kumar <hello@adesh.com>',
-//     to: options.email,
-//     subject: options.subject,
-//     text: options.message,
-//   };
-//   //3 actually send the email
-  
-// }
 
