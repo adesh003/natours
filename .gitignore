@@ -5,6 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+
+echo "config.env" >> .gitignore
+
+
 # === Environment Files ===
 .env               # main env file (contains secrets, NEVER push this)
 .env.*             # variations like .env.dev, .env.local, etc.
