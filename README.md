@@ -1,4 +1,6 @@
 # natours
+<img width="300" height="156" alt="logo-green-small" src="https://github.com/user-attachments/assets/f9ac04d8-19d0-492d-9d5d-b1eeb8cad895" />
+
 Natours is a full-stack travel booking web application for exploring and booking nature tours around the world.
 Built with Node.js, Express, MongoDB, and Stripe API for secure payments.
 Features include user authentication, reviews, tour management, and map integration via Mapbox.
