@@ -14,7 +14,7 @@ exports.getCheckoutSession =catchAsync(async (req,res,next)=>{
 
 
         //2 create checkout session
-
+const imageUrl = `${req.protocol}://${req.get('host')}/img/tours/${tour.imageCover}`;
         const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     mode: 'payment',
@@ -30,7 +30,7 @@ exports.getCheckoutSession =catchAsync(async (req,res,next)=>{
           product_data: {
             name: `${tour.name} Tour`,
             description: tour.summary,
-            images: ['https://yourdomain.com/img/tours/default.jpg'] // Put real image URL or leave blank
+            images: [imageUrl] // Put real image URL or leave blank
           }
         },
         quantity: 1 

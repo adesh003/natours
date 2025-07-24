@@ -25,18 +25,65 @@ app.use(express.static(path.join(__dirname,'public')));
 // 1)GLOBAL MIDDLEWARES
 // SET Security HTTP HEADER
 
+// -------------------------------------------------
+
 
 // app.use(helmet());
+// app.use(
+//   helmet.contentSecurityPolicy({
+//     directives: {
+//       defaultSrc: ["'self'"],
+//       scriptSrc: ["'self'", "https://cdnjs.cloudflare.com"],
+//       styleSrc: ["'self'", 'https://fonts.googleapis.com'],
+//       fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+//     }
+//   })
+// );
+
+// app.use(
+//   helmet.contentSecurityPolicy({
+//     directives: {
+//       defaultSrc: ["'self'"],
+//       scriptSrc: ["'self'", "https://cdnjs.cloudflare.com", "https://js.stripe.com"],
+//       frameSrc: ["'self'", "https://js.stripe.com"],
+//       connectSrc: ["'self'", "https://api.stripe.com"]
+//     },
+//   })
+// );
+
+
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "https://cdnjs.cloudflare.com"],
-      styleSrc: ["'self'", 'https://fonts.googleapis.com'],
-      fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-    }
+      scriptSrc: [
+        "'self'",
+        "https://js.stripe.com",
+        "https://cdn.jsdelivr.net",
+        "https://cdnjs.cloudflare.com",
+        "'unsafe-inline'", // only if necessary
+      ],
+      styleSrc: [
+        "'self'",
+        "https://fonts.googleapis.com",
+        "'unsafe-inline'", // needed for many CSS-in-JS libs
+      ],
+      fontSrc: ["'self'", "https://fonts.gstatic.com", "data:"],
+      imgSrc: ["'self'", "data:", "blob:", "https://res.cloudinary.com"],
+      mediaSrc: ["'self'", "https://ssl.gstatic.com"],
+      connectSrc: [
+        "'self'",
+        "https://api.stripe.com",
+        "https://127.0.0.1:5000", // your API
+      ],
+      frameSrc: ["'self'", "https://js.stripe.com"],
+      objectSrc: ["'none'"], // good security
+      baseUri: ["'self'"],
+      formAction: ["'self'"],
+    },
   })
 );
+// ---------------------
 
 // DEVELOPMENT LOGIN
 if (process.env.NODE_ENV === 'development') {
