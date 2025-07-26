@@ -292,11 +292,11 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-.btn-text:focus {
+/* .btn-text:focus {
   outline: none;
   outline: 3px solid #55c57a;
   outline-offset: 3px;
-}
+} */
 
 .header {
   background-color: #444;
@@ -364,7 +364,7 @@ body {
   object-position: 50% 25%;
 }
 
-.header__hero-overlay {
+/* .header__hero-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -377,13 +377,15 @@ body {
   );
   background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
   opacity: 0.85;
-}
+} */
 
 .heading-box {
   position: absolute;
+
   bottom: 13vw;
   left: 50%;
   top: 35%;
+  
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -1105,7 +1107,7 @@ body {
   clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
   height: 22rem;
 }
-.card__picture-overlay {
+/* .card__picture-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1118,7 +1120,7 @@ body {
   );
   background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
   opacity: 0.7;
-}
+} */
 .card__picture-img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -1177,7 +1179,7 @@ body {
   font-weight: 700;
 }
 .card__footer-text {
-  color: #999;
+  color: #8e5959;
 }
 .card__ratings {
   grid-row: 2 / 3;
@@ -1332,3 +1334,4 @@ body {
   color: #55c57a; /* Example color from the theme */
   text-decoration: underline;
 }
+

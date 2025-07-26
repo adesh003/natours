@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet')
 const hpp = require('hpp');
-
+const compression = require('compression')
 
 
 const AppError = require('./utils/appError');
@@ -120,6 +120,8 @@ app.use(hpp({
 // serving static file
 // app.use(express.static(`${__dirname}/public`));
  
+app.use(compression());
+
 
 // test milddleware
 app.use((req, res, next) => {

@@ -117,7 +117,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   
   
   /////////////////////////
-  console.log('TOKEN RECEIVED:', token);
+  // console.log('TOKEN RECEIVED:', token);
 
 
   //3) check if user still exists
@@ -223,11 +223,11 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
     
     
-    console.log('RESET TOKEN:', resetToken); // raw token
-    console.log(
-      'HASHED:',
-      crypto.createHash('sha256').update(resetToken).digest('hex')
-    );
+    // console.log('RESET TOKEN:', resetToken); // raw token
+    // console.log(
+    //   'HASHED:',
+    //   crypto.createHash('sha256').update(resetToken).digest('hex')
+    // );
 
     
     
@@ -249,8 +249,8 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     passwordResetExpires: { $gt: Date.now() },
   });
 
-  console.log('INCOMING TOKEN HASH:', hashedToken);
-  console.log('USER FOUND:', user); // might be null
+  // console.log('INCOMING TOKEN HASH:', hashedToken);
+  // console.log('USER FOUND:', user); // might be null
 
   // 2) If token has not expired, and there is user, set the new password
   if (!user) {

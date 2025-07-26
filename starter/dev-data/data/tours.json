@@ -1,77 +1,78 @@
+
 [
   {
     "startLocation": {
-      "description": "Miami, USA",
+      "description": "Port Blair, Andaman & Nicobar Islands",
       "type": "Point",
-      "coordinates": [-80.185942, 25.774772],
-      "address": "301 Biscayne Blvd, Miami, FL 33132, USA"
+      "coordinates": [92.7163, 11.6234],
+      "address": "Cellular Jail, Atlanta Point, Port Blair, Andaman and Nicobar Islands 744104, India"
     },
     "ratingsAverage": 4.8,
-    "ratingsQuantity": 6,
+    "ratingsQuantity": 15,
     "images": ["tour-2-1.jpg", "tour-2-2.jpg", "tour-2-3.jpg"],
     "startDates": [
-      "2021-06-19T09:00:00.000Z",
-      "2021-07-20T09:00:00.000Z",
-      "2021-08-18T09:00:00.000Z"
+      "2025-11-20T09:00:00.000Z",
+      "2025-12-18T09:00:00.000Z",
+      "2026-01-22T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2955",
-    "name": "The Sea Explorer",
+    "name": "The Andaman Explorer",
     "duration": 7,
     "maxGroupSize": 15,
     "difficulty": "medium",
     "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a1f4e2f8fb814b56fa185"],
-    "price": 497,
-    "summary": "Exploring the jaw-dropping US east coast by foot and by boat",
-    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "imageCover": "tour-2-cover.jpg",
+    "price": 45000,
+    "summary": "Exploring the pristine beaches and turquoise waters of the Andaman Islands",
+    "description": "Embark on an unforgettable journey to the Andaman Islands, a tropical paradise in the Bay of Bengal. Discover breathtaking coral reefs, indulge in thrilling water sports, and relax on world-renowned beaches. This tour offers a perfect blend of adventure and serenity, from the historical Cellular Jail in Port Blair to the stunning natural beauty of Havelock and Neil Islands. Experience the unique culture and delectable seafood of this Indian archipelago.",
+    "imageCover": "andaman-islands-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c2959",
-        "description": "Lummus Park Beach",
+        "description": "Radhanagar Beach, Havelock Island",
         "type": "Point",
-        "coordinates": [-80.128473, 25.781842],
+        "coordinates": [92.9424, 11.9796],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c2958",
-        "description": "Islamorada",
+        "description": "Bharatpur Beach, Neil Island",
         "type": "Point",
-        "coordinates": [-80.647885, 24.909047],
-        "day": 2
-      },
-      {
-        "_id": "5c88fa8cf4afda39709c2957",
-        "description": "Sombrero Beach",
-        "type": "Point",
-        "coordinates": [-81.0784, 24.707496],
+        "coordinates": [92.9223, 11.8282],
         "day": 3
       },
       {
-        "_id": "5c88fa8cf4afda39709c2956",
-        "description": "West Key",
+        "_id": "5c88fa8cf4afda39709c2957",
+        "description": "Limestone Caves, Baratang Island",
         "type": "Point",
-        "coordinates": [-81.768719, 24.552242],
+        "coordinates": [92.7936, 12.1643],
         "day": 5
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2956",
+        "description": "Ross Island",
+        "type": "Point",
+        "coordinates": [92.7633, 11.6742],
+        "day": 7
       }
     ]
   },
   {
     "startLocation": {
-      "description": "Banff, CAN",
+      "description": "Manali, Himachal Pradesh",
       "type": "Point",
-      "coordinates": [-115.570154, 51.178456],
-      "address": "224 Banff Ave, Banff, AB, Canada"
+      "coordinates": [77.1887, 32.2432],
+      "address": "Mall Road, Siyal, Manali, Himachal Pradesh 175131, India"
     },
     "ratingsAverage": 5,
-    "ratingsQuantity": 9,
+    "ratingsQuantity": 25,
     "images": ["tour-1-1.jpg", "tour-1-2.jpg", "tour-1-3.jpg"],
     "startDates": [
-      "2021-04-25T09:00:00.000Z",
-      "2021-07-20T09:00:00.000Z",
-      "2021-10-05T09:00:00.000Z"
+      "2025-05-15T09:00:00.000Z",
+      "2025-06-20T09:00:00.000Z",
+      "2025-09-10T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2951",
-    "name": "The Forest Hiker",
+    "name": "The Himalayan Hiker",
     "duration": 5,
     "maxGroupSize": 25,
     "difficulty": "easy",
@@ -80,51 +81,51 @@
       "5c8a201e2f8fb814b56fa186",
       "5c8a1f292f8fb814b56fa184"
     ],
-    "price": 397,
-    "summary": "Breathtaking hike through the Canadian Banff National Park",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "imageCover": "tour-1-cover.jpg",
+    "price": 25000,
+    "summary": "Breathtaking hike through the serene valleys of Himachal Pradesh",
+    "description": "Escape to the majestic Himalayas on this refreshing hiking tour. Starting from the charming town of Manali, we will trek through lush green meadows, dense pine forests, and picturesque villages. Enjoy stunning views of snow-capped peaks, breathe in the crisp mountain air, and experience the warm hospitality of the local communities. This tour is perfect for nature lovers and those seeking a peaceful retreat in the lap of the Himalayas.",
+    "imageCover": "himalayan-hiker-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c2954",
-        "description": "Banff National Park",
+        "description": "Solang Valley",
         "type": "Point",
-        "coordinates": [-116.214531, 51.417611],
+        "coordinates": [77.1574, 32.3149],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c2953",
-        "description": "Jasper National Park",
+        "description": "Parvati Valley, Kasol",
         "type": "Point",
-        "coordinates": [-118.076152, 52.875223],
+        "coordinates": [77.3153, 32.0104],
         "day": 3
       },
       {
         "_id": "5c88fa8cf4afda39709c2952",
-        "description": "Glacier National Park of Canada",
+        "description": "Triund, McLeod Ganj",
         "type": "Point",
-        "coordinates": [-117.490309, 51.261937],
+        "coordinates": [76.3503, 32.2530],
         "day": 5
       }
     ]
   },
   {
     "startLocation": {
-      "description": "Aspen, USA",
+      "description": "Srinagar, Jammu & Kashmir",
       "type": "Point",
-      "coordinates": [-106.822318, 39.190872],
-      "address": "419 S Mill St, Aspen, CO 81611, USA"
+      "coordinates": [74.8260, 34.0837],
+      "address": "Dal Lake, Srinagar, Jammu and Kashmir 190001, India"
     },
-    "ratingsAverage": 4.5,
-    "ratingsQuantity": 6,
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 10,
     "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
     "startDates": [
-      "2022-01-05T10:00:00.000Z",
-      "2022-02-12T10:00:00.000Z",
-      "2023-01-06T10:00:00.000Z"
+      "2026-01-10T10:00:00.000Z",
+      "2026-02-15T10:00:00.000Z",
+      "2027-01-12T10:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c295a",
-    "name": "The Snow Adventurer",
+    "name": "The Kashmir Snow Adventurer",
     "duration": 4,
     "maxGroupSize": 10,
     "difficulty": "difficult",
@@ -133,44 +134,44 @@
       "5c8a23412f8fb814b56fa18c",
       "5c8a1f4e2f8fb814b56fa185"
     ],
-    "price": 997,
-    "summary": "Exciting adventure in the snow with snowboarding and skiing",
-    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
-    "imageCover": "tour-3-cover.jpg",
+    "price": 55000,
+    "summary": "Exciting adventure in the snow with skiing and snowboarding in Gulmarg",
+    "description": "Experience the thrill of a lifetime in the powdery snow of Gulmarg, the premier ski resort of India. This tour is designed for winter sports enthusiasts, offering world-class skiing and snowboarding opportunities on the slopes of the Pir Panjal range. Ride the famous Gulmarg Gondola, one of the highest in the world, and enjoy breathtaking views of the snow-covered Himalayas. Whether you are a beginner or an expert, Gulmarg promises an unforgettable snow adventure.",
+    "imageCover": "kashmir-snow-adventure-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c295c",
-        "description": "Aspen Highlands",
+        "description": "Gulmarg Ski Resort",
         "type": "Point",
-        "coordinates": [-106.855385, 39.182677],
+        "coordinates": [74.3831, 34.0494],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c295b",
-        "description": "Beaver Creek",
+        "description": "Apharwat Peak",
         "type": "Point",
-        "coordinates": [-106.516623, 39.60499],
+        "coordinates": [74.3418, 34.0253],
         "day": 2
       }
     ]
   },
   {
     "startLocation": {
-      "description": "Las Vegas, USA",
+      "description": "Jaipur, Rajasthan",
       "type": "Point",
-      "coordinates": [-115.172652, 36.110904],
-      "address": "3663 S Las Vegas Blvd, Las Vegas, NV 89109, USA"
+      "coordinates": [75.7873, 26.9124],
+      "address": "Hawa Mahal, Hawa Mahal Rd, Badi Choupad, J.D.A. Market, Pink City, Jaipur, Rajasthan 302002, India"
     },
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 7,
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 18,
     "images": ["tour-5-1.jpg", "tour-5-2.jpg", "tour-5-3.jpg"],
     "startDates": [
-      "2021-08-05T09:00:00.000Z",
-      "2022-03-20T10:00:00.000Z",
-      "2022-08-12T09:00:00.000Z"
+      "2025-10-25T09:00:00.000Z",
+      "2026-02-18T10:00:00.000Z",
+      "2026-11-15T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2961",
-    "name": "The Park Camper",
+    "name": "The Rajasthan Desert Camper",
     "duration": 10,
     "maxGroupSize": 15,
     "difficulty": "medium",
@@ -179,107 +180,107 @@
       "5c8a23412f8fb814b56fa18c",
       "5c8a201e2f8fb814b56fa186"
     ],
-    "price": 1497,
-    "summary": "Breathing in Nature in America's most spectacular National Parks",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!",
-    "imageCover": "tour-5-cover.jpg",
+    "price": 65000,
+    "summary": "Experiencing the royal heritage and desert landscapes of Rajasthan",
+    "description": "Embark on a majestic journey through the land of kings, Rajasthan. Explore magnificent forts, opulent palaces, and vibrant markets. This tour takes you through the heart of Rajasthan, from the pink city of Jaipur to the golden sands of the Thar Desert in Jaisalmer. Enjoy a camel safari at sunset, camp under the starlit desert sky, and immerse yourself in the rich culture and traditions of this incredible state.",
+    "imageCover": "rajasthan-desert-camper-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c2965",
-        "description": "Zion Canyon National Park",
+        "description": "Mehrangarh Fort, Jodhpur",
         "type": "Point",
-        "coordinates": [-112.987418, 37.198125],
-        "day": 1
+        "coordinates": [73.0188, 26.2979],
+        "day": 2
       },
       {
         "_id": "5c88fa8cf4afda39709c2964",
-        "description": "Antelope Canyon",
+        "description": "Sam Sand Dunes, Jaisalmer",
         "type": "Point",
-        "coordinates": [-111.376161, 36.86438],
+        "coordinates": [70.5015, 26.8617],
         "day": 4
       },
       {
         "_id": "5c88fa8cf4afda39709c2963",
-        "description": "Grand Canyon National Park",
+        "description": "City Palace, Udaipur",
         "type": "Point",
-        "coordinates": [-112.115763, 36.058973],
-        "day": 5
+        "coordinates": [73.6834, 24.5765],
+        "day": 7
       },
       {
         "_id": "5c88fa8cf4afda39709c2962",
-        "description": "Joshua Tree National Park",
+        "description": "Pushkar Lake, Pushkar",
         "type": "Point",
-        "coordinates": [-116.107963, 34.011646],
+        "coordinates": [74.5539, 26.4868],
         "day": 9
       }
     ]
   },
   {
     "startLocation": {
-      "description": "NYC, USA",
+      "description": "New Delhi, Delhi",
       "type": "Point",
-      "coordinates": [-73.985141, 40.75894],
-      "address": "Manhattan, NY 10036, USA"
+      "coordinates": [77.2167, 28.6139],
+      "address": "India Gate, Rajpath, India Gate, New Delhi, Delhi 110001, India"
     },
-    "ratingsAverage": 4.6,
-    "ratingsQuantity": 5,
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 22,
     "images": ["tour-4-1.jpg", "tour-4-2.jpg", "tour-4-3.jpg"],
     "startDates": [
-      "2021-03-11T10:00:00.000Z",
-      "2021-05-02T09:00:00.000Z",
-      "2021-06-09T09:00:00.000Z"
+      "2025-10-10T10:00:00.000Z",
+      "2026-02-05T09:00:00.000Z",
+      "2026-03-15T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c295d",
-    "name": "The City Wanderer",
+    "name": "The Golden Triangle Wanderer",
     "duration": 9,
     "maxGroupSize": 20,
     "difficulty": "easy",
     "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a201e2f8fb814b56fa186"],
-    "price": 1197,
-    "summary": "Living the life of Wanderlust in the US' most beatiful cities",
-    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet.\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat!",
-    "imageCover": "tour-4-cover.jpg",
+    "price": 50000,
+    "summary": "Living the life of Wanderlust in India's most beautiful cities",
+    "description": "Discover the heart of India on the classic Golden Triangle tour. This journey takes you through the bustling capital of Delhi, the city of the iconic Taj Mahal, Agra, and the vibrant pink city of Jaipur. Witness the perfect blend of history, culture, and architecture as you explore ancient monuments, magnificent forts, and bustling bazaars. This tour offers a quintessential Indian experience, creating memories that will last a lifetime.",
+    "imageCover": "golden-triangle-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c2960",
-        "description": "New York",
+        "description": "Humayun's Tomb, New Delhi",
         "type": "Point",
-        "coordinates": [-73.967696, 40.781821],
+        "coordinates": [77.2507, 28.5933],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c295f",
-        "description": "Los Angeles",
+        "description": "Taj Mahal, Agra",
         "type": "Point",
-        "coordinates": [-118.324396, 34.097984],
-        "day": 3
+        "coordinates": [78.0421, 27.1751],
+        "day": 4
       },
       {
         "_id": "5c88fa8cf4afda39709c295e",
-        "description": "San Francisco",
+        "description": "Amber Fort, Jaipur",
         "type": "Point",
-        "coordinates": [-122.408865, 37.787825],
-        "day": 5
+        "coordinates": [75.8513, 26.9855],
+        "day": 7
       }
     ]
   },
-  {
+    {
     "startLocation": {
-      "description": "California, USA",
+      "description": "Rishikesh, Uttarakhand",
       "type": "Point",
-      "coordinates": [-118.803461, 34.006072],
-      "address": "29130 Cliffside Dr, Malibu, CA 90265, USA"
+      "coordinates": [78.2676, 30.0869],
+      "address": "Laxman Jhula, Rishikesh, Uttarakhand 249302, India"
     },
-    "ratingsAverage": 3.9,
-    "ratingsQuantity": 7,
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 18,
     "images": ["tour-6-1.jpg", "tour-6-2.jpg", "tour-6-3.jpg"],
     "startDates": [
-      "2021-07-19T09:00:00.000Z",
-      "2021-09-06T09:00:00.000Z",
-      "2022-03-18T10:00:00.000Z"
+      "2025-04-10T09:00:00.000Z",
+      "2025-05-20T09:00:00.000Z",
+      "2025-10-15T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2966",
-    "name": "The Sports Lover",
+    "name": "The Rishikesh Adventure Lover",
     "duration": 14,
     "maxGroupSize": 8,
     "difficulty": "difficult",
@@ -288,114 +289,114 @@
       "5c8a1f292f8fb814b56fa184",
       "5c8a1f4e2f8fb814b56fa185"
     ],
-    "price": 2997,
-    "summary": "Surfing, skating, parajumping, rock climbing and more, all in one tour",
-    "description": "Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nVoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur!",
-    "imageCover": "tour-6-cover.jpg",
+    "price": 75000,
+    "summary": "White-water rafting, bungee jumping, trekking and more, all in one tour",
+    "description": "Get your adrenaline pumping in the adventure capital of India, Rishikesh. This tour is packed with thrilling activities, from navigating the rapids of the holy Ganges on a raft to taking a leap of faith with bungee jumping. We will also explore the surrounding Himalayan foothills on exciting treks, camp by the riverside under the stars, and experience the spiritual vibe of this unique town. This is the ultimate adventure tour for thrill-seekers.",
+    "imageCover": "rishikesh-adventure-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c296b",
-        "description": "Point Dume Beach",
+        "description": "Shivpuri Rafting Point",
         "type": "Point",
-        "coordinates": [-118.809361, 34.003098],
+        "coordinates": [78.3312, 30.1337],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c296a",
-        "description": "Venice Skate Park",
+        "description": "Jumpin Heights Bungee Jumping",
         "type": "Point",
-        "coordinates": [-118.47549, 33.987367],
+        "coordinates": [78.3697, 30.1345],
         "day": 4
       },
       {
         "_id": "5c88fa8cf4afda39709c2969",
-        "description": "San Diego Skydive",
+        "description": "Neer Garh Waterfall Trek",
         "type": "Point",
-        "coordinates": [-116.830104, 33.022843],
+        "coordinates": [78.3094, 30.1171],
         "day": 6
       },
       {
         "_id": "5c88fa8cf4afda39709c2968",
-        "description": "Kern River Rafting",
+        "description": "Kunjapuri Temple Sunrise Trek",
         "type": "Point",
-        "coordinates": [-118.4547, 35.710359],
-        "day": 7
+        "coordinates": [78.3308, 30.1793],
+        "day": 9
       },
       {
         "_id": "5c88fa8cf4afda39709c2967",
-        "description": "Yosemite National Park",
+        "description": "Vashishta Gufa (Cave)",
         "type": "Point",
-        "coordinates": [-119.600492, 37.742371],
-        "day": 10
+        "coordinates": [78.4357, 30.0890],
+        "day": 12
       }
     ]
   },
   {
     "startLocation": {
-      "description": "Utah, USA",
+      "description": "Kaza, Spiti Valley",
       "type": "Point",
-      "coordinates": [-109.55099, 37.283469],
-      "address": "Bluff, UT 84512, USA"
+      "coordinates": [78.0722, 32.2278],
+      "address": "Kaza, Himachal Pradesh 172114, India"
     },
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 6,
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 10,
     "images": ["tour-8-1.jpg", "tour-8-2.jpg", "tour-8-3.jpg"],
     "startDates": [
-      "2021-03-23T10:00:00.000Z",
-      "2021-10-25T09:00:00.000Z",
-      "2022-01-30T10:00:00.000Z"
+      "2025-06-25T10:00:00.000Z",
+      "2025-07-20T09:00:00.000Z",
+      "2025-08-15T10:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2970",
-    "name": "The Star Gazer",
+    "name": "The Spiti Valley Star Gazer",
     "duration": 9,
     "maxGroupSize": 8,
     "difficulty": "medium",
     "guides": ["5c8a21d02f8fb814b56fa189", "5c8a1f292f8fb814b56fa184"],
-    "price": 2997,
+    "price": 60000,
     "summary": "The most remote and stunningly beautiful places for seeing the night sky",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "imageCover": "tour-8-cover.jpg",
+    "description": "Journey to the high-altitude desert of Spiti Valley, a land of stark landscapes, ancient monasteries, and unparalleled night skies. Tucked away in the Himalayas, Spiti's remote location and clear weather make it one of the best places in the world for stargazing. Explore ancient Buddhist culture, drive through some of the world's highest motorable passes, and witness the Milky Way in all its glory. This is a tour for those who seek true wilderness and celestial beauty.",
+    "imageCover": "spiti-valley-stargazer-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c2973",
-        "description": "Natural Bridges National Monument",
+        "description": "Key Monastery",
         "type": "Point",
-        "coordinates": [-109.99953, 37.629017],
+        "coordinates": [78.0101, 32.2995],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c2972",
-        "description": "Horseshoe Bend",
+        "description": "Langza Village",
         "type": "Point",
-        "coordinates": [-111.50954, 36.883269],
+        "coordinates": [78.0721, 32.2858],
         "day": 3
       },
       {
         "_id": "5c88fa8cf4afda39709c2971",
-        "description": "Death Valley National Park",
+        "description": "Chandratal Lake",
         "type": "Point",
-        "coordinates": [-117.07399, 36.501435],
+        "coordinates": [77.6186, 32.4800],
         "day": 6
       }
     ]
   },
   {
     "startLocation": {
-      "description": "Yellowknife, CAN",
+      "description": "Gangtok, Sikkim",
       "type": "Point",
-      "coordinates": [-114.406097, 62.439943],
-      "address": "Yellowknife, NT X1A 2L2, Canada"
+      "coordinates": [88.6065, 27.3389],
+      "address": "MG Marg, Arithang, Gangtok, Sikkim 737101, India"
     },
-    "ratingsAverage": 4.7,
-    "ratingsQuantity": 7,
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 12,
     "images": ["tour-9-1.jpg", "tour-9-2.jpg", "tour-9-3.jpg"],
     "startDates": [
-      "2021-12-16T10:00:00.000Z",
-      "2022-01-16T10:00:00.000Z",
-      "2022-12-12T10:00:00.000Z"
+      "2025-10-15T10:00:00.000Z",
+      "2025-11-20T10:00:00.000Z",
+      "2026-04-10T10:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2974",
-    "name": "The Northern Lights",
+    "name": "The Sikkim Panorama",
     "duration": 3,
     "maxGroupSize": 12,
     "difficulty": "easy",
@@ -404,65 +405,65 @@
       "5c8a201e2f8fb814b56fa186",
       "5c8a23412f8fb814b56fa18c"
     ],
-    "price": 1497,
-    "summary": "Enjoy the Northern Lights in one of the best places in the world",
-    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
-    "imageCover": "tour-9-cover.jpg",
+    "price": 30000,
+    "summary": "Enjoy the stunning mountain views and serene monasteries of Sikkim",
+    "description": "Discover the enchanting beauty of Sikkim, a hidden gem in the Eastern Himalayas. This tour takes you through lush green hills, charming villages, and serene Buddhist monasteries. Enjoy breathtaking panoramic views of Mount Kanchenjunga, the third highest peak in the world. Visit high-altitude lakes, vibrant flower valleys, and immerse yourself in the peaceful and pristine environment of this beautiful state.",
+    "imageCover": "sikkim-panorama-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c2975",
-        "description": "Yellowknife",
+        "description": "Tsomgo Lake",
         "type": "Point",
-        "coordinates": [-114.406097, 62.439943],
+        "coordinates": [88.7622, 27.3747],
         "day": 1
       }
     ]
   },
   {
     "startLocation": {
-      "description": "California, USA",
+      "description": "Nashik, Maharashtra",
       "type": "Point",
-      "coordinates": [-122.29286, 38.294065],
-      "address": "560 Jefferson St, Napa, CA 94559, USA"
+      "coordinates": [73.7898, 19.9975],
+      "address": "Sula Vineyards, Govardhan Village, Off, Gangapur-Savargaon Rd, Nashik, Maharashtra 422222, India"
     },
-    "ratingsAverage": 4.4,
-    "ratingsQuantity": 7,
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 12,
     "images": ["tour-7-1.jpg", "tour-7-2.jpg", "tour-7-3.jpg"],
     "startDates": [
-      "2021-02-12T10:00:00.000Z",
-      "2021-04-14T09:00:00.000Z",
-      "2021-09-01T09:00:00.000Z"
+      "2026-01-20T10:00:00.000Z",
+      "2026-03-15T09:00:00.000Z",
+      "2026-11-05T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c296c",
-    "name": "The Wine Taster",
+    "name": "The Nashik Wine Taster",
     "duration": 5,
     "maxGroupSize": 8,
     "difficulty": "easy",
     "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a23412f8fb814b56fa18c"],
-    "price": 1997,
-    "summary": "Exquisite wines, scenic views, exclusive barrel tastings,  and much more",
-    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "imageCover": "tour-7-cover.jpg",
+    "price": 38000,
+    "summary": "Exquisite wines, scenic views, exclusive barrel tastings, and much more",
+    "description": "Indulge your senses in the wine capital of India, Nashik. This tour offers a delightful journey through lush vineyards and state-of-the-art wineries. Enjoy guided wine tasting sessions, learn about the art of winemaking, and savor delicious food pairings. With scenic views of rolling hills and a relaxing ambiance, this tour is a perfect getaway for wine connoisseurs and those looking for a unique and sophisticated experience.",
+    "imageCover": "nashik-wine-taster-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c296f",
-        "description": "Beringer Vineyards",
+        "description": "Sula Vineyards",
         "type": "Point",
-        "coordinates": [-122.479887, 38.510312],
+        "coordinates": [73.7088, 20.0076],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c296e",
-        "description": "Clos Pegase Winery & Tasting Room",
+        "description": "York Winery & Tasting Room",
         "type": "Point",
-        "coordinates": [-122.582948, 38.585707],
+        "coordinates": [73.7144, 20.0092],
         "day": 3
       },
       {
         "_id": "5c88fa8cf4afda39709c296d",
-        "description": "Raymond Vineyard and Cellar",
+        "description": "Soma Vine Village",
         "type": "Point",
-        "coordinates": [-122.434697, 38.482181],
+        "coordinates": [73.6925, 20.0051],
         "day": 5
       }
     ]

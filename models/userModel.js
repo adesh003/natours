@@ -54,18 +54,18 @@ const userSchemas = new mongoose.Schema({
   }
 });
 
-userSchemas.pre('save', async function (next) {
-  // only run if password modified
+// userSchemas.pre('save', async function (next) {
+//   // only run if password modified
 
-  if (!this.isModified('password')) return next();
+//   if (!this.isModified('password')) return next();
 
-  // hash the password with 12
-  this.password = await bcrypt.hash(this.password, 12);
+//   // hash the password with 12
+//   this.password = await bcrypt.hash(this.password, 12);
 
-  //Delete confirm password field
-  this.confirmpassword = undefined;
-  next();
-});
+//   //Delete confirm password field
+//   this.confirmpassword = undefined;
+//   next();
+// });
 
 
 userSchemas.pre(/^find/, function(next) {
@@ -111,7 +111,7 @@ userSchemas.methods.changedPasswordAfter = function (JWTTimestamp) {
       .update(resetToken)
       .digest('hex');
 
-    console.log({ resetToken }, this.passwordResetToken);
+    // console.log({ resetToken }, this.passwordResetToken);
 
     this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
 
