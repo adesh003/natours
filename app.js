@@ -22,34 +22,6 @@ app.set('view engine' ,'pug')
 app.set('views' ,path.join(__dirname , 'views'))
 app.use(express.static(path.join(__dirname,'public')));
 
-// 1)GLOBAL MIDDLEWARES
-// SET Security HTTP HEADER
-
-// -------------------------------------------------
-
-
-// app.use(helmet());
-// app.use(
-//   helmet.contentSecurityPolicy({
-//     directives: {
-//       defaultSrc: ["'self'"],
-//       scriptSrc: ["'self'", "https://cdnjs.cloudflare.com"],
-//       styleSrc: ["'self'", 'https://fonts.googleapis.com'],
-//       fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-//     }
-//   })
-// );
-
-// app.use(
-//   helmet.contentSecurityPolicy({
-//     directives: {
-//       defaultSrc: ["'self'"],
-//       scriptSrc: ["'self'", "https://cdnjs.cloudflare.com", "https://js.stripe.com"],
-//       frameSrc: ["'self'", "https://js.stripe.com"],
-//       connectSrc: ["'self'", "https://api.stripe.com"]
-//     },
-//   })
-// );
 
 
 app.use(

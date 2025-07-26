@@ -31,7 +31,7 @@ exports.getCheckoutSession =catchAsync(async (req,res,next)=>{
           product_data: {
             name: `${tour.name} Tour`,
             description: tour.summary,
-            images: [imageUrl] // Put real image URL or leave blank
+            images: [`https://natours.dev/img/logo-green.png`] // Put real image URL or leave blank
           }
         },
         quantity: 1 
